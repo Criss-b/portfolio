@@ -1,20 +1,42 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const routes = [
   {
+    name: "index",
     path: "/",
-    name: "home",
-    component: HomeView,
+    component: () =>
+      import(/* webpackChunkName: "Index"*/ "../views/indexPage.vue"),
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    name: "cv",
+    path: "/cv",
+    component: () => import(/* webpackChunkName: "Cv"*/ "../views/cvPage.vue"),
+  },
+  {
+    name: "contatti",
+    path: "/contatti",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "Contatti"*/ "../views/contactsPage.vue"),
+  },
+  {
+    name: "menu",
+    path: "/menu",
+    component: () =>
+      import(/* webpackChunkName: "Menu"*/ "../views/menuPage.vue"),
+  },
+  {
+    name: "wip",
+    path: "/wip",
+    component: () =>
+      import(
+        /* webpackChunkName: "Work in progress"*/ "../views/workInProgress.vue"
+      ),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: () =>
+      import(/* webpackChunkName: "NotFound"*/ "../views/errorPage.vue"),
   },
 ];
 
@@ -22,5 +44,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+router.resolve({
+  name: "not-found",
+  params: { pathMatch: ["not", "found"] },
+}).href;
 
 export default router;
