@@ -30,7 +30,7 @@ export default {
       projects: [
         {
           id: 1,
-          hrefCard: "https://jovial-sopapillas-a33ef3.netlify.app/",
+          hrefCard: "https://cb-pizza-lover.netlify.app/",
           srcCard: require("@/assets/img/pizza.webp"),
           imgDefault: require("@/assets/img/project.webp"),
           titleCard: "PIZZA LOVER",
@@ -38,7 +38,7 @@ export default {
         },
         {
           id: 2,
-          hrefCard: "https://astonishing-lamington-f4f1ca.netlify.app/#/",
+          hrefCard: "https://cb-qrcode-generator.netlify.app/",
           srcCard: require("@/assets/img/qr.webp"),
           imgDefault: require("@/assets/img/project.webp"),
           titleCard: "QR GENERATOR",
