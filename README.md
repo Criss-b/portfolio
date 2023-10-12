@@ -1,24 +1,6 @@
-# portfolio
+# Benvenuti nel mio portfolio
 
-## Project setup
-```
-npm install
-```
+Sviluppato con Vue.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Link diretto: [portfolio](https://cb29profile.netlify.app/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
