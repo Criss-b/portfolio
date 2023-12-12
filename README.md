@@ -2,5 +2,5 @@
 
 Sviluppato con Vue.js
 
-Link diretto: [portfolio](https://cb29profile.netlify.app/)
+Link diretto: [portfolio](https://cristinaballerini-portfolio.netlify.app/)
 
