@@ -142,7 +142,7 @@ export default {
   z-index: 2;
   position: relative;
   bottom: 75px;
-  left: 10px;
+  left: 30px;
   font-weight: 300;
 }
 .colorCv {
@@ -166,7 +166,7 @@ export default {
 .title-h2 {
   font-size: 65px;
   font-weight: 300;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 .colorTitle {
   display: flex;

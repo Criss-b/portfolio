@@ -157,19 +157,18 @@ export default {
   }
 }
 @media screen and (max-width: 768px) {
-  .headerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 300px;
-    margin: 30px 0;
-  }
-  .desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .headerBackground {
+    background: repeating-linear-gradient(
+      90deg,
+      #ffffff 0px,
+      #ffffff 242px,
+      #f2ebe2 242px,
+      #f2ebe2 526px,
+      #ffffff 526px,
+      #ffffff 768px
+    );
+    width: 768px;
+    height: 284px;
   }
   .desc h1 {
     font-size: 40px;
@@ -182,6 +181,19 @@ export default {
   }
 }
 @media screen and (max-width: 426px) {
+  .headerBackground {
+    background: repeating-linear-gradient(
+      90deg,
+      #ffffff 0px,
+      #ffffff 50px,
+      #f2ebe2 50px,
+      #f2ebe2 270px,
+      #ffffff 270px,
+      #ffffff 320px
+    );
+    width: 320px;
+    height: 220px;
+  }
   .desc h1 {
     font-size: 25px;
   }

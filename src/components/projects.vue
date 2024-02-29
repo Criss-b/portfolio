@@ -44,7 +44,10 @@ export default {
         if (element) {
           const coord = element.getBoundingClientRect();
           const positionProject = coord.top + window.scrollY;
-          if (window.scrollY >= positionProject - halfInnerHeight) {
+          if (
+            window.scrollY >= positionProject - halfInnerHeight &&
+            window.innerWidth >= 768
+          ) {
             this.isAppear[project.id] = true;
           }
         }
@@ -78,6 +81,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .project:nth-child(even) .item {
   flex-direction: row-reverse;
@@ -133,6 +137,7 @@ img:hover {
   position: relative;
   display: flex;
   padding: 0 40px;
+  z-index: 99;
 }
 .description {
   position: relative;
@@ -154,48 +159,87 @@ img:hover {
   justify-content: right;
   text-align: right;
 }
-@media screen and (max-width: 768px) {
-  .card {
-    width: 350px;
-    height: 350px;
+@media screen and (max-width: 1080px) {
+  .card,
+  .card a {
+    width: 380px;
+    height: 380px;
   }
   img {
-    width: 200px;
-    height: 200px;
-    margin: 0 10px;
-  }
-  .backgroundContent {
-    width: 250px;
-    height: 150px;
+    width: 380px;
+    height: 380px;
   }
 }
-@media only screen and (max-width: 426px) {
-  .project {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  .project:nth-child(odd),
-  .project:nth-child(even) {
-    justify-content: center;
-  }
-  .card {
+@media screen and (max-width: 768px) {
+  .card,
+  .card a {
     width: 200px;
     height: 200px;
   }
   img {
-    width: 100px;
-    height: 100px;
-    margin: 0 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .project:nth-child(odd) .card {
+    left: -80px;
+  }
+  .project:nth-child(even) .card {
+    right: -80px;
   }
   .backgroundContent {
-    padding: 0 10px;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+  }
+  .project:nth-child(odd) .backgroundContent {
+    right: 50px;
+  }
+  .project:nth-child(even) .backgroundContent {
+    left: 50px;
+  }
+
+  .description.fromTop {
+    top: 120px;
+  }
+  .description {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .item {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project:nth-child(odd) .item {
+    flex-direction: column;
+  }
+  .project:nth-child(even) .item {
+    flex-direction: column;
+  }
+  .project:nth-child(odd) .card {
+    left: 0px;
+  }
+  .project:nth-child(even) .card {
+    right: 0px;
+  }
+  .backgroundContent {
+    height: 100px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .project:nth-child(odd) .backgroundContent {
+    right: 0px;
+    top: -50px;
+  }
+  .project:nth-child(even) .backgroundContent {
+    justify-content: flex-end;
+    left: 0px;
+    top: -50px;
   }
   .description {
     font-size: 12px;
+    opacity: 1;
+    padding-bottom: 10px;
   }
   .media-content {
     padding: 0;
