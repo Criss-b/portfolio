@@ -31,8 +31,9 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   text-align: center;
+  padding-top: 50px;
 }
 
 button {

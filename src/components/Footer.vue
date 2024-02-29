@@ -61,14 +61,14 @@ export default {
 .footerContainer {
   background: linear-gradient(
     0deg,
-    rgba(248, 245, 240, 1) 0%,
-    rgba(225, 207, 185, 0) 100%
+    rgba(242, 235, 226, 1) 0%,
+    rgba(248, 245, 240, 0) 100%
   );
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 80px 0px 80px;
+  padding: 180px 0px 80px;
   width: 100%;
   height: auto;
 }
