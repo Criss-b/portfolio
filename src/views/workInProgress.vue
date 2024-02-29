@@ -19,7 +19,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #023535;
+  color: #c7a67e;
 }
 h1 {
   font-size: 80px;

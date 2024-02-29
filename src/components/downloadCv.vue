@@ -42,31 +42,34 @@ export default {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: #023535;
+  color: #c7a67e;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 15px;
   margin-left: 5%;
 }
+.btn:hover {
+  opacity: 0.5;
+}
 .img {
   height: 50px;
   width: auto;
 }
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 750px) {
   .img {
-    height: 25px;
+    height: 40px;
     width: auto;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .img {
     height: 30px;
     width: auto;
   }
 }
-@media only screen and (min-width: 421px) and (max-width: 750px) {
+@media screen and (max-width: 320px) {
   .img {
-    height: 40px;
+    height: 25px;
     width: auto;
   }
 }

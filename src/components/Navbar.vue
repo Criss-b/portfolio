@@ -4,7 +4,7 @@
       <RouterLink to="/">
         <img
           class="logo"
-          src="@/assets/img/logoGreen1.svg"
+          src="@/assets/img/logoBeige.svg"
           @click="clickTo({ name: 'index' })"
         />
       </RouterLink>
@@ -27,16 +27,6 @@
           :class="{ underline: $route.path === '/cv' }"
         >
           CV
-        </button>
-      </RouterLink>
-
-      <RouterLink to="/contatti">
-        <button
-          class="btn"
-          @click="clickTo({ path: '/contatti' })"
-          :class="{ underline: $route.path === '/contatti' }"
-        >
-          CONTATTI
         </button>
       </RouterLink>
     </div>
@@ -80,13 +70,14 @@ export default {
 
 <style lang="scss" scoped>
 .menuContainer {
+  background-color: #f2ebe2;
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  position: relative;
+  position: sticky;
 }
 
 .btnContainer {
@@ -99,12 +90,12 @@ export default {
 }
 
 span {
-  color: #347355;
+  color: #c7a67e;
 }
 .btn {
   background-color: transparent;
   border: none;
-  color: #347355;
+  color: #c7a67e;
   font-family: nenue;
   letter-spacing: 1px;
   font-size: 1.5rem;
@@ -113,11 +104,11 @@ span {
 }
 
 .btn:hover {
-  border-bottom: 1px solid #347355;
+  border-bottom: 1px solid #c7a67e;
   cursor: pointer;
 }
 .underline {
-  border-bottom: 1px solid #347355;
+  border-bottom: 1px solid #c7a67e;
 }
 .menuBurger {
   position: absolute;
@@ -129,7 +120,7 @@ span {
 }
 .menuBurger span {
   display: block;
-  background-color: #347355;
+  background-color: #c7a67e;
   width: 30px;
   height: 3px;
   margin: 5px 0;
@@ -166,20 +157,20 @@ span {
     display: none;
   }
 }
+@media only screen and (max-width: 768px) {
+  .logo {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-left: 0;
+  }
+}
 @media only screen and (max-width: 317px) {
   .logo {
     width: 40px;
     height: 80px;
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 318px) and (max-width: 600px) {
-  .logo {
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .logo {
     margin-left: 0;
   }
 }

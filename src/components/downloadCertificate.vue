@@ -38,8 +38,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   width: 100%;
+  padding: 5% 10%;
 }
 .btn {
   font-family: nenue;
@@ -48,22 +48,32 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   cursor: pointer;
-  width: 160px;
-  padding: 0 10px;
+  width: 150px;
+  padding: 0 5px;
   background-color: transparent;
   border: none;
 }
 p {
-  color: #023535;
-  font-size: 1rem;
+  color: #c7a67e;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-@media only screen and (max-width: 769px) {
+.btn:hover {
+  opacity: 0.5;
+}
+@media screen and (max-width: 769px) {
   .certificateContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 15%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .img {
+    height: 40px;
+    width: auto;
   }
 }
 </style>

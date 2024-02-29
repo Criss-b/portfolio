@@ -9,8 +9,8 @@
     <div class="introduction">
       <p>
         Studio per diventare Front-End developer, ho competenze in Javascript ed
-        i relativi linguaggi di markup HTML e CSS. Inoltre, mi piace sviluppare
-        web app a single page con il framework VueJS.
+        i relativi linguaggi di markup HTML e CSS. Inoltre, sviluppo web app a
+        single page con il framework Vue.js.
       </p>
     </div>
     <div>
@@ -50,9 +50,7 @@
       </span>
     </div>
     <div class="content">
-      <div>
-        <downloadCertificate :certificate="certificate"></downloadCertificate>
-      </div>
+      <downloadCertificate :certificate="certificate"></downloadCertificate>
     </div>
   </div>
 </template>
@@ -103,19 +101,19 @@ export default {
         {
           id: 5,
           pathFile: "Corso5.pdf",
-          fileName: "Introduzione Vue js",
+          fileName: "Introduzione Vue.js",
           imgFile: require("@/assets/img/certificate.png"),
         },
         {
           id: 6,
           pathFile: "Corso6.pdf",
-          fileName: "Vue js per SPA",
+          fileName: "Vue.js per SPA",
           imgFile: require("@/assets/img/certificate.png"),
         },
         {
           id: 7,
           pathFile: "Corso7.pdf",
-          fileName: "Vue js 3",
+          fileName: "Vue.js 3",
           imgFile: require("@/assets/img/certificate.png"),
         },
       ],
@@ -126,9 +124,9 @@ export default {
 
 <style lang="scss" scoped>
 .cvContainer {
-  background-size: cover;
+  width: 100%;
   min-height: 100vh;
-  color: #023535;
+  color: #c7a67e;
   letter-spacing: 1px;
 }
 .titleContainer {
@@ -137,7 +135,7 @@ export default {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 .title-h1 {
   font-size: 140px;
@@ -145,13 +143,12 @@ export default {
   position: relative;
   bottom: 75px;
   left: 10px;
-  text-shadow: 2px 2px 2px #347355;
   font-weight: 300;
 }
 .colorCv {
   z-index: 1;
   display: block;
-  background-color: #3b8c66;
+  background-color: #f2ebe2;
   height: 150px;
   width: 90%;
   margin-left: -20%;
@@ -164,96 +161,71 @@ export default {
 .introduction p {
   font-weight: 500;
   font-size: 30px;
-  color: #023535;
+  color: #ab7f49;
 }
 .title-h2 {
   font-size: 65px;
   font-weight: 300;
-  text-shadow: 2px 2px 2px #347355;
   margin-left: 10px;
 }
 .colorTitle {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  z-index: 1;
-  background-color: #3b8c66;
+  align-items: flex-start;
+  background-color: #f2ebe2;
   height: 100px;
   width: 90%;
-  right: 0;
 }
 .content {
-  margin: 5% 0 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .content ul {
-  margin-top: 10%;
-  margin-bottom: -13.5%;
+  padding: 5% 10%;
 }
 .content li {
-  z-index: 2;
   list-style: none;
-  margin-left: 15%;
   font-size: 30px;
 }
 .li {
-  color: #023535;
+  color: #ab7f49;
 }
 em {
-  color: #3b8c66;
+  color: #e1cfb9;
 }
-.content li:last-child {
-  margin-bottom: 25%;
-}
-.content div {
-  margin-top: 10%;
-  margin-bottom: -13.5%;
-}
-.content div:last-child {
-  margin-bottom: 25%;
-}
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 890px) {
+  .titleContainer {
+    margin-top: 60px;
+  }
   .title-h1 {
-    font-size: 60px;
-    margin-top: 10px;
-    margin-bottom: -70px;
+    font-size: 90px;
+    margin-top: 50px;
   }
   .colorCv {
-    height: 70px;
+    height: 100px;
     width: 80%;
-    margin-left: -40%;
   }
   .introduction {
-    margin: 20% 5%;
-    width: 90%;
-  }
-  .introduction p {
-    font-size: 16px;
-  }
-  .title-h2 {
-    font-size: 22px;
-  }
-  .colorTitle {
-    height: 50px;
+    margin: 0 10% 5%;
     width: 80%;
   }
-  .content ul {
-    margin-top: 10%;
-    margin-bottom: 13.5%;
-    margin-left: 25%;
+  .introduction p {
+    font-size: 20px;
   }
-  .content {
-    margin-left: 0;
-    margin-bottom: 10%;
+  .title-h2 {
+    font-size: 35px;
+  }
+  .colorTitle {
+    height: 70px;
+    width: 80%;
   }
   .content li {
-    margin-left: -10%;
-    font-size: 16px;
-  }
-  .content li:last-child {
-    margin-bottom: 35%;
+    font-size: 20px;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .title-h1 {
     font-size: 90px;
     margin-top: 50px;
@@ -280,39 +252,37 @@ em {
   .content li {
     font-size: 15px;
   }
-  .content li:last-child {
-    margin-bottom: 35%;
-  }
 }
-
-@media only screen and (min-width: 601px) and (max-width: 890px) {
+@media screen and (max-width: 425px) {
   .title-h1 {
-    font-size: 90px;
-    margin-top: 50px;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: -70px;
   }
   .colorCv {
-    height: 100px;
-    width: 80%;
-  }
-  .introduction {
-    margin: 0 10% 5%;
-    width: 80%;
-  }
-  .introduction p {
-    font-size: 20px;
-  }
-  .title-h2 {
-    font-size: 35px;
-  }
-  .colorTitle {
     height: 70px;
     width: 80%;
+    margin-left: -40%;
+  }
+  .introduction {
+    margin: 20% 5%;
+    width: 90%;
+  }
+  .introduction p {
+    font-size: 16px;
+  }
+  .title-h2 {
+    font-size: 22px;
+  }
+  .colorTitle {
+    height: 50px;
+    width: 80%;
+  }
+  .content {
+    padding-left: 0;
   }
   .content li {
-    font-size: 20px;
-  }
-  .content li:last-child {
-    margin-bottom: 30%;
+    font-size: 16px;
   }
 }
 </style>

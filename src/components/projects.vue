@@ -1,21 +1,22 @@
 <template>
-  <div v-for="project in projects" :key="project.id" class="projectItem">
-    <div class="card">
-      <a :href="project.hrefCard" :target="project.target">
-        <div class="card-image">
-          <img
-            @mouseover="changeImg($event)"
-            @mouseout="resetImg($event)"
-            @touchmove="changeImg($event)"
-            @touchend="resetImg($event)"
-            :src="project.imgDefault"
-            :data-id="project.id"
-            alt=""
-          />
+  <div
+    v-for="project in projects"
+    :key="project.id"
+    class="project"
+    :id="project.id"
+  >
+    <div class="item">
+      <div class="card" :class="{ fromSide: isAppear[project.id] }">
+        <a :href="project.hrefCard" :target="project.target">
+          <img :src="project.srcCard" :data-id="project.id" alt="" />
+        </a>
+      </div>
+      <div class="backgroundContent">
+        <div class="media-content">
+          <p class="description" :class="{ fromTop: isAppear[project.id] }">
+            {{ project.descCard }}
+          </p>
         </div>
-      </a>
-      <div class="media-content">
-        <p class="title">{{ project.titleCard }}</p>
       </div>
     </div>
   </div>
@@ -30,75 +31,174 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      isAppear: {},
+    };
+  },
   methods: {
-    changeImg(event) {
-      const id = event.target.dataset.id;
-      const project = this.projects.find((obj) => obj.id.toString() === id);
-      if (project) {
-        event.target.src = project.srcCard;
-      }
+    handleScroll() {
+      const halfInnerHeight = window.innerHeight / 2;
+      this.projects.forEach((project) => {
+        const element = document.getElementById(project.id);
+        if (element) {
+          const coord = element.getBoundingClientRect();
+          const positionProject = coord.top + window.scrollY;
+          if (window.scrollY >= positionProject - halfInnerHeight) {
+            this.isAppear[project.id] = true;
+          }
+        }
+      });
     },
-    resetImg(event) {
-      const id = event.target.dataset.id;
-      const project = this.projects.find((obj) => obj.id.toString() === id);
-      if (project) {
-        event.target.src = project.imgDefault;
-      }
-    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.projectItem {
-  padding: 25px;
+.project {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  width: 100%;
+  height: auto;
 }
-.card {
-  border-radius: 5px;
-  box-shadow: 0px 0px 6px 2px #6c786b;
+.project:nth-child(odd) {
+  justify-content: flex-start;
+  margin: 25px 0;
 }
-.card-image {
-  width: 300px;
-  height: 300px;
+.project:nth-child(even) {
+  justify-content: flex-end;
+  margin: 25px 0;
 }
-.card-image img {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  width: 300px;
-  height: 300px;
+.item {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.project:nth-child(even) .item {
+  flex-direction: row-reverse;
+}
+.card,
+.card a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 432px;
+  height: 432px;
+  background-color: #ece1d4;
+  z-index: 99;
+}
+.project:nth-child(odd) .card {
+  left: -110px;
+  transition: left 0.5s ease-in-out;
+}
+.project:nth-child(even) .card {
+  right: -110px;
+  transition: right 0.5s ease-in-out;
+}
+.project:nth-child(odd) .card.fromSide {
+  left: 100px;
+}
+.project:nth-child(even) .card.fromSide {
+  right: 100px;
+}
+img {
+  width: 432px;
+  height: 432px;
+}
+img:hover {
+  opacity: 0.7;
+}
+.backgroundContent {
+  position: relative;
+  display: flex;
+  width: 700px;
+  height: 500px;
+  background-color: #f8f5f0;
+}
+.project:nth-child(odd) .backgroundContent {
+  right: 100px;
+  justify-content: flex-end;
+}
+.project:nth-child(even) .backgroundContent {
+  justify-content: flex-start;
+  left: 100px;
 }
 .media-content {
-  background-color: #347355;
-  padding-top: 20px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  width: 60%;
+  position: relative;
+  display: flex;
+  padding: 0 40px;
 }
-.title {
-  font-weight: 400;
-  color: #91fa27;
+.description {
+  position: relative;
+  height: fit-content;
+  font-weight: 600;
+  color: #ab7f49;
+  font-size: 18px;
   text-align: center;
-  padding-bottom: 20px;
-  font-size: 25px;
-  text-shadow: 2px 2px 2px #347355;
+  opacity: 0;
+  top: 0;
+  transition: top 1s ease-in-out;
 }
-@media only screen and (max-width: 350px) {
-  .projectItem {
-    padding: 25px 0;
+
+.description.fromTop {
+  top: 225px;
+  opacity: 1;
+}
+.project:nth-child(even) .media-content {
+  justify-content: right;
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 350px;
+    height: 350px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+  }
+  .backgroundContent {
+    width: 250px;
+    height: 150px;
   }
 }
-@media only screen and (max-width: 350px) {
-  .card-image {
+@media only screen and (max-width: 426px) {
+  .project {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project:nth-child(odd),
+  .project:nth-child(even) {
+    justify-content: center;
+  }
+  .card {
     width: 200px;
     height: 200px;
   }
-  .card-image img {
-    width: 200px;
-    height: 200px;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
   }
-  .title {
-    font-size: 15px;
+  .backgroundContent {
+    padding: 0 10px;
+    width: 150px;
+    height: 150px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .media-content {
+    padding: 0;
   }
 }
 </style>

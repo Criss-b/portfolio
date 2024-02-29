@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="logoBrown.svg"
+   inkscape:export-filename="C:\Users\criba\OneDrive\Desktop\logoBianco.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <style
+     id="style865" />
+  <defs
+     id="defs2">
+    <rect
+       x="7.9184956"
+       y="5.5429469"
+       width="199.54609"
+       height="289.02509"
+       id="rect18" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#f8f5f0"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="-10.053952"
+     inkscape:cy="619.60838"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-to-guides="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1000"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="false"
+     inkscape:snap-global="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="text16"
+       style="font-weight:200;font-size:259.292px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect18);fill:#000000;stroke:none" />
+    <g
+       aria-label="C"
+       id="text24"
+       style="font-weight:200;font-size:259.292px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';letter-spacing:0px;word-spacing:0px;fill:#d2b88e;fill-opacity:1;stroke-width:0.264583;stroke:none;"
+       inkscape:export-filename="C:\Users\criba\OneDrive\Documenti\ProgettiVue\introduzioneVue-2\prova-cli\src\assets\logoBeige.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="path2980"
+         style="fill:#725430;fill-opacity:1;stroke:none;stroke-width:0.999999;stroke-opacity:1"
+         d="M 201.38672 206.30664 L 201.63672 223.08594 L 375.33398 223.08594 C 374.06633 223.21553 372.79925 223.34827 371.54102 223.49023 C 303.95084 228.88219 236.63486 250.79896 198.74023 301.0625 C 119.31791 375.71396 85.822266 490.72408 85.822266 593.49609 C 85.822266 687.35819 112.06244 766.49374 157.67773 826.61328 L 112.56836 937.47656 L 135.16602 937.47656 L 172.66016 844.89453 C 179.02771 852.09299 185.70143 858.96838 192.66992 865.51562 C 240.70388 927.69146 322.77089 955.14648 420.42578 955.14648 C 420.74191 955.14648 421.05877 955.13945 421.375 955.13867 C 460.05602 956.16755 494.87914 950.7066 525.85156 939.70703 C 576.05559 923.98972 619.74732 895.85545 644.8418 853.47852 L 678.50195 937.47656 L 700.11914 937.47656 L 657.38672 829.48047 C 685.47311 782.93045 703.02668 725.99876 710.08398 663.07617 L 690.48438 663.07617 C 686.07034 699.09568 678.44731 732.89496 667.3457 763.60156 C 666.36026 680.09945 629.02937 640.02546 572.3457 614.55273 L 504.81445 443.88281 L 504.81445 443.12891 L 504.51562 443.12891 L 424.96094 242.07031 C 542.26607 246.80179 629.40324 298.65835 634.06445 434.76562 L 653.66602 434.76562 C 652.20919 401.46678 646.40701 372.73541 636.87891 348.10938 C 658.74813 378.97312 671.83389 413.4998 674.80273 447.47656 L 694.4043 447.47656 C 691.66865 367.23118 612.55098 240.34212 452.34961 223.08594 L 618.37891 223.08594 L 618.62891 206.55664 L 201.38672 206.30664 z M 395.61719 241.85938 L 313.7168 443.13672 L 306.03516 462.01758 L 277.98633 530.94727 C 224.44359 508.15714 187.18555 472.4181 187.18555 402.42578 C 187.18555 367.82658 196.36944 340.09881 211.72852 318.06641 C 252.12559 279.05485 305.52364 250.93924 374.38477 242.98633 C 381.50998 242.41522 388.60262 242.04735 395.61719 241.85938 z M 417.8125 273.74609 L 484.5 445.64453 L 484.50977 586.10547 C 466.41831 581.45888 447.58903 576.90466 428.26562 571.96484 C 424.78194 571.13675 421.29646 570.32352 417.8125 569.51562 L 417.8125 273.74609 z M 402.20312 274.49219 L 402.20312 546.27539 L 333.96289 444.39648 L 402.20312 274.49219 z M 170.46289 367.83203 C 168.58819 378.63033 167.58398 390.13858 167.58398 402.42578 C 167.58398 484.50485 211.08333 524.83809 270.36914 549.66992 L 175.45508 782.92773 C 169.65926 760.2898 166.60547 734.79792 166.60547 706.22461 L 147.00391 706.22461 C 146.49189 736.9458 149.64465 764.50836 156.02539 789.09375 C 122.71102 733.38143 105.38626 665.76482 105.42188 593.49609 C 105.45675 522.73039 124.36915 437.04367 170.46289 367.83203 z M 326.03516 464.13477 L 327.31445 466.00977 L 393.06836 563.86133 C 370.0872 558.64884 347.48131 553.46755 326.1582 547.44922 L 326.03516 464.13477 z M 504.81836 498.01562 L 545.97656 604.10547 C 532.95621 599.53226 519.16976 595.4197 504.82422 591.48828 L 504.81836 498.01562 z M 306.03711 513.92188 L 306.03906 541.37109 C 302.76321 540.30187 299.52949 539.20249 296.33789 538.07031 L 306.03711 513.92188 z M 288.83008 556.76562 C 294.46672 558.75567 300.21163 560.63905 306.04102 562.4375 L 306.04883 687.38867 L 236.36523 687.38867 L 288.83008 556.76562 z M 326.1875 568.25 C 350.94506 574.97111 376.75922 580.61474 402.20312 586.53125 L 402.20312 687.38867 L 326.36328 687.38867 L 326.1875 568.25 z M 434.10742 593.9082 C 450.80486 597.63467 467.76139 601.34938 484.51172 605.50781 L 484.51562 667.7207 L 483.54883 667.7207 L 434.10742 593.9082 z M 417.8125 600.68555 L 476.07422 687.38867 L 417.8125 687.38867 L 417.8125 600.68555 z M 504.82617 610.85742 C 522.4742 615.80121 539.5785 621.48766 555.44727 628.51953 L 578.28516 687.38867 L 504.83008 687.38867 L 504.82617 610.85742 z M 583.82617 643.56836 C 621.91547 667.85907 647.78516 704.73684 647.78516 766.00586 C 647.78516 777.20374 646.76514 787.78054 644.83594 797.76172 L 583.82617 643.56836 z M 228.50586 707.00391 L 305.22656 707.00391 L 305.22656 914.24609 C 269.081 900.70183 237.56022 881.06673 210.88086 856.65039 C 200.80085 843.91237 192.28776 829.46172 185.50195 813.18555 L 228.50586 707.00391 z M 326.87109 707.00391 L 447.04883 707.00391 C 469.53473 715.12249 482.50586 731.49971 482.50586 754.16992 C 482.50586 801.22569 436.64034 810.22266 395.92773 810.22266 L 326.87109 810.22266 L 326.87109 707.00391 z M 480.68945 707.00391 L 586.14453 707.00391 L 635.04883 829.04492 C 635.0073 829.13835 634.9675 829.23288 634.92578 829.32617 C 604.60621 875.39779 562.09532 909.0081 505.7793 924.95703 C 502.74561 918.72877 501.57422 911.98781 501.57422 903.29492 L 501.57422 877.3457 C 501.57422 843.43787 490.75095 818.52549 430.45508 816.10352 L 430.45508 815.41211 C 478.38257 811.95213 504.15039 786.69376 504.15039 754.16992 C 504.15039 733.09054 495.32266 717.55857 480.68945 707.00391 z M 326.87109 821.98633 L 406.23438 821.98633 C 465.49958 821.98633 479.92969 842.39958 479.92969 877.69141 L 479.92969 902.94922 C 479.92969 913.56592 481.86134 922.69627 485.10938 929.68359 C 469.60221 932.57501 453.75124 934.36629 437.92188 935.12109 C 426.49018 935.50403 414.64984 935.33178 402.36328 934.53711 C 375.49358 932.79922 350.31099 928.34026 326.87109 921.46484 L 326.87109 821.98633 z "
+         transform="scale(0.26458333)" />
+    </g>
+    <g
+       aria-label="A"
+       transform="scale(1.0009124,0.99908842)"
+       id="text28"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:259.723px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke-width:0.264583;stroke:none" />
+    <g
+       aria-label="S"
+       id="text32"
+       style="font-weight:200;font-size:259.292px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Ultra-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke-width:0.264583;stroke:none" />
+    <g
+       aria-label="T"
+       transform="scale(1.0642888,0.9395946)"
+       id="text36"
+       style="font-weight:200;font-size:194.012px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke-width:0.665;stroke-miterlimit:4;stroke-dasharray:none;stroke:none" />
+    <g
+       aria-label="N"
+       transform="matrix(1.1812955,-4.076433e-5,5.6782525e-5,0.84652821,0,0)"
+       id="text40"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:108.327px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;opacity:1;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke-width:0.999945;stroke-miterlimit:4;stroke-dasharray:none;stroke:none" />
+    <g
+       aria-label="R"
+       transform="scale(1.2204329,0.81938139)"
+       id="text22"
+       style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:111.725px;line-height:1.25;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue Thin';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:0.264582;stroke:none" />
+  </g>
+</svg>

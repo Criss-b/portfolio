@@ -20,17 +20,14 @@ body::-webkit-scrollbar {
 } 
 
 body::-webkit-scrollbar-thumb {
-  background-color: #023535; 
+  background-color: #e1cfb9; 
   border-radius: 50px; 
 }
 body::-webkit-scrollbar-track {
-  background-color: #D8FFDB;
+  background-color: #fcebd6;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #023535;
+  background-color: #e1cfb9;
   border-radius: 50px;
-}
-#app {
-  background: linear-gradient(#91fa27, #60BF81);
 }

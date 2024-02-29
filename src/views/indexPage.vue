@@ -1,19 +1,16 @@
 <template>
   <div class="indexContainer">
     <div class="headerContainer">
-      <div class="desc">
-        <h1>CRISTINA BALLERINI</h1>
-        <p>Front-End Developer</p>
+      <div class="headerBackground" :class="{ appear: isAppear }">
+        <div class="desc">
+          <div class="descBackground" :class="{ appear: isAppear }">
+            <h1>CRISTINA BALLERINI</h1>
+            <p>Junior Front-End Developer</p>
+          </div>
+        </div>
       </div>
-      <div class="logo">
-        <img src="@/assets/img/logoGreen.svg" />
-      </div>
-    </div>
-    <div class="spanContainer">
-      <span class="span"></span>
     </div>
     <div class="contentContainer">
-      <h2><b>PROGETTI</b></h2>
       <div class="projectsContainer">
         <projects :projects="projects"></projects>
       </div>
@@ -27,33 +24,36 @@ export default {
   components: { projects },
   data() {
     return {
+      isAppear: false,
       projects: [
         {
           id: 1,
           hrefCard: "https://cb-pizza-lover.netlify.app/",
           srcCard: require("@/assets/img/pizza.webp"),
-          imgDefault: require("@/assets/img/project.webp"),
-          titleCard: "PIZZA LOVER",
+          descCard: "Web app per pizzeria con prenotazione",
           target: "_blank",
         },
         {
           id: 2,
           hrefCard: "https://cb-qrcode-generator.netlify.app/",
           srcCard: require("@/assets/img/qr.webp"),
-          imgDefault: require("@/assets/img/project.webp"),
-          titleCard: "QR GENERATOR",
+          descCard: "Web app per la generazione di qrcode tramite link",
           target: "_blank",
         },
-        {
+        /* {
           id: 3,
           hrefCard: "/wip",
           srcCard: require("@/assets/img/wip.webp"),
-          imgDefault: require("@/assets/img/project.webp"),
-          titleCard: "WORK IN PROGRESS",
+          descCard: "Lavori in corso... (sito web associazione Oltrefossa)",
           target: "",
-        },
+        }, */
       ],
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isAppear = true;
+    }, 1);
   },
 };
 </script>
@@ -67,13 +67,47 @@ export default {
   width: 100%;
 }
 .headerContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 300px;
-  margin-bottom: 30px;
+  margin: 100px 0 80px;
+}
+.headerBackground {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background: repeating-linear-gradient(
+    90deg,
+    #ffffff 0px,
+    #ffffff 250px,
+    #f2ebe2 250px,
+    #f2ebe2 550px,
+    #ffffff 550px,
+    #ffffff 800px
+  );
+  width: 800px;
+  height: 300px;
+  left: -700px;
+  transition: left 1s ease-in-out;
+}
+.headerBackground.appear {
+  left: 0;
+  justify-content: center;
+}
+.descBackground {
+  position: relative;
+  z-index: 99;
+  background-color: #e6d7c5;
+  width: max-content;
+  height: auto;
+  right: -1050px;
+  transition: right 1s ease-in-out;
+}
+.descBackground.appear {
+  right: 0;
 }
 .desc {
   display: flex;
@@ -81,63 +115,55 @@ export default {
   justify-content: center;
 }
 .desc h1 {
-  color: #023535;
+  color: #ffffff;
   letter-spacing: 1px;
   font-size: 3.5rem;
+  z-index: 99;
+  padding: 10px 10px 0;
+  text-align: center;
 }
 .desc p {
   font-size: 25px;
-  color: #347355;
-  font-weight: 300;
-}
-.logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.logo img {
-  width: 200px;
-  height: 250px;
-}
-.spanContainer {
-  display: flex;
-  justify-content: center;
-  padding: 80px 0;
-}
-.span {
-  display: block;
-  background-color: #023535;
-  height: 5px;
-  width: 80%;
+  color: #ffffff;
+  font-weight: 600;
+  z-index: 99;
+  padding: 0px 10px 10px;
+  text-align: center;
 }
 .contentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
   padding-bottom: 50px;
-}
-.contentContainer h2 {
-  color: #023535;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 3rem;
-  margin-bottom: 80px;
+  background-color: #ece1d4;
 }
 .projectsContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
   margin-bottom: 25%;
+  width: 90%;
 }
-@media only screen and (max-width: 320px) {
+@media screen and (max-width: 1080px) {
+  .desc h1 {
+    font-size: 40px;
+  }
+  .desc p {
+    font-size: 25px;
+  }
+  .contentContainer h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
   .headerContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
     height: 300px;
-    margin-bottom: 30px;
+    margin: 30px 0;
   }
   .desc {
     display: flex;
@@ -145,6 +171,17 @@ export default {
     justify-content: center;
     align-items: center;
   }
+  .desc h1 {
+    font-size: 40px;
+  }
+  .desc p {
+    font-size: 25px;
+  }
+  .contentContainer h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 426px) {
   .desc h1 {
     font-size: 25px;
   }
@@ -152,118 +189,8 @@ export default {
     font-size: 20px;
     text-align: center;
   }
-  .logo {
-    align-items: center;
-  }
-  .logo img {
-    width: 100px;
-    height: 132.5px;
-  }
   .contentContainer h2 {
     font-size: 30px;
-  }
-  .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: auto;
-  }
-}
-@media only screen and (min-width: 321px) and (max-width: 426px) {
-  .headerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 30px;
-  }
-
-  .desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .desc h1 {
-    font-size: 25px;
-  }
-  .desc p {
-    font-size: 20px;
-    text-align: center;
-  }
-  .logo {
-    align-items: center;
-  }
-  .logo img {
-    width: 100px;
-    height: 132.5px;
-  }
-  .contentContainer h2 {
-    font-size: 30px;
-  }
-  .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: auto;
-  }
-}
-@media only screen and (min-width: 427px) and (max-width: 650px) {
-  .headerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 30px;
-  }
-  .desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .desc h1 {
-    font-size: 40px;
-  }
-  .desc p {
-    font-size: 25px;
-  }
-  .logo img {
-    width: 150px;
-    height: 198.75px;
-  }
-  .contentContainer h2 {
-    font-size: 40px;
-  }
-  .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: auto;
-  }
-}
-@media only screen and (min-width: 651px) and (max-width: 1080px) {
-  .desc h1 {
-    font-size: 40px;
-  }
-  .desc p {
-    font-size: 25px;
-  }
-  .logo img {
-    width: 150px;
-    height: 198.75px;
-  }
-  .contentContainer h2 {
-    font-size: 40px;
-  }
-  .projectsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: auto;
   }
 }
 </style>
