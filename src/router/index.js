@@ -19,14 +19,6 @@ const routes = [
       import(/* webpackChunkName: "Menu"*/ "../views/menuPage.vue"),
   },
   {
-    name: "wip",
-    path: "/wip",
-    component: () =>
-      import(
-        /* webpackChunkName: "Work in progress"*/ "../views/workInProgress.vue"
-      ),
-  },
-  {
     path: "/:pathMatch(.*)*",
     name: "not-found",
     component: () =>

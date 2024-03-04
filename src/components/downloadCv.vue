@@ -55,13 +55,13 @@ export default {
   height: 50px;
   width: auto;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 884px) {
   .img {
     height: 40px;
     width: auto;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .img {
     height: 30px;
     width: auto;

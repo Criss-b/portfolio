@@ -170,7 +170,7 @@ img:hover {
     height: 380px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 884px) {
   .card,
   .card a {
     width: 200px;
@@ -204,7 +204,7 @@ img:hover {
     font-size: 15px;
   }
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
   .item {
     flex-direction: column;
     justify-content: center;

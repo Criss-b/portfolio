@@ -112,7 +112,7 @@ export default {
   font-size: 12px;
   font-weight: 600;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 884px) {
   .itemLink {
     display: flex;
     flex-direction: column;

@@ -29,7 +29,7 @@ p {
   font-size: 30px;
   text-align: center;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 884px) {
   h1 {
     font-size: 30px;
   }

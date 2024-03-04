@@ -46,19 +46,19 @@ button {
   font-weight: 600;
   margin-bottom: 30px;
 }
-@media only screen and (min-width: 769px) {
-  button {
-    font-size: 40px;
-  }
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 884px) {
   button {
     font-size: 30px;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 768px) {
   button {
-    font-size: 20px;
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  button {
+    font-size: 30px;
   }
 }
 </style>

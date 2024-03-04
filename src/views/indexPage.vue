@@ -156,7 +156,7 @@ export default {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 884px) {
   .headerBackground {
     background: repeating-linear-gradient(
       90deg,
@@ -180,7 +180,7 @@ export default {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
   .headerBackground {
     background: repeating-linear-gradient(
       90deg,

@@ -253,7 +253,7 @@ em {
     font-size: 15px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .title-h1 {
     font-size: 60px;
     margin-top: 10px;

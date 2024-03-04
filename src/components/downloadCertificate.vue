@@ -61,7 +61,7 @@ p {
 .btn:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 884px) {
   .certificateContainer {
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@ p {
     width: 100%;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .img {
     height: 40px;
     width: auto;
